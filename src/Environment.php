@@ -20,6 +20,9 @@ Class Environment
     /** @var string $cache_dir */
     private $cache_dir;
 
+    /** @var string $root_dir */
+    private $root_dir = '';
+
     /** @var string $template_dir */
     private $template_dir = 'app/view';
 
@@ -36,7 +39,7 @@ Class Environment
 
     public function getCacheDir() : string
     {
-        return $this->cache_dir;
+        return "{$this->root_dir}{$this->cache_dir}";
     }
 
     public function setCacheDir( string $cache_dir ) : void
@@ -44,9 +47,19 @@ Class Environment
         $this->cache_dir = $cache_dir;
     }
 
+    public function getRootDir() : string
+    {
+        return $this->root_dir;
+    }
+
+    public function setRootDir( string $root_dir ) : void
+    {
+        $this->root_dir = $root_dir;
+    }
+
     public function getTemplateDir() : string
     {
-        return $this->template_dir;
+        return "{$this->root_dir}{$this->template_dir}";
     }
 
     public function setTemplateDir( string $template_dir ) : void
