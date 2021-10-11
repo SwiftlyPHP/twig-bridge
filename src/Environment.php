@@ -29,7 +29,7 @@ Class Environment
     /**
      * Create a new template environment from the provided config
      *
-     * @param Config $config Application configuration
+     * @param Store $config Application configuration
      */
     public function __construct( Store $config )
     {
@@ -81,7 +81,7 @@ Class Environment
     }
 
     /**
-     * Does the user wish to see debug messages
+     * Determine whether debug mode is enabled
      *
      * @return bool Is debug?
      */
