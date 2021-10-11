@@ -1,21 +1,40 @@
 <?php
 
-use Swiftly\TwigBridge;
-use Swiftly\Config\Store;
-use Swiftly\Template\TemplateInterface;
+namespace Swiftly\TwigBridge;
 
+use Swiftly\Template\TemplateInterface;
+use Twig\Environment;
+
+/**
+ * Provides a bridge between Twig and Swiftly
+ *
+ * @author clvarley
+ */
 Class TwigBridge Implements TemplateInterface
 {
 
-    public function __construct()
+    /** @var Environment $twig */
+    private $twig;
+
+    /**
+     * Wrap the underlying Twig engine
+     *
+     * @param Environment $twig Twig engine
+     */
+    public function __construct( Environment $twig )
     {
-        // TODO
+        $this->twig = $twig;
     }
 
-    public function render( string $template, array $data = [] ) : string
+    /**
+     * Render the given Twig template
+     *
+     * @param string $template Template path
+     * @param mixed[] $context Template context
+     * @return string          Rendered contents
+     */
+    public function render( string $template, array $context = [] ) : string
     {
-        // TODO
-
-        return '';
+        return $this->twig->render( $template, $context );
     }
 }
