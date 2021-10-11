@@ -1,0 +1,21 @@
+{
+    "name": "swiftly/twig-bridge",
+    "description": "Bridging library, allowing you to use Twig templates in your Swiftly projects.",
+    "homepage": "https://github.com/SwiftlyPHP/timber-bridge",
+    "readme": "README.md",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.2 || ^8",
+        "twig/twig": "^3.3"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swiftly\\TwigBridge\\": "src/"
+        }
+    }
+}
