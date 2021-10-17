@@ -29,8 +29,7 @@ Class TwigBridge Implements TemplateInterface
     /**
      * Render the given Twig template
      *
-     * @psalm-param array<string,mixed> $context
-     *
+     * @no-named-arguments
      * @param string $template Template path
      * @param mixed[] $context Template context
      * @return string          Rendered contents

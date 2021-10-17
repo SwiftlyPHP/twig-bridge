@@ -6,8 +6,9 @@
     "type": "library",
     "license": "MIT",
     "require": {
-        "php": "^7.2 || ^8",
-        "twig/twig": "^3.3"
+        "php": "^7.3 || ^8",
+        "twig/twig": "^3.3",
+        "swiftly/template": "1.0.0-beta"
     },
     "require-dev": {
         "vimeo/psalm": "^4.8",
@@ -17,6 +18,11 @@
     "autoload": {
         "psr-4": {
             "Swiftly\\TwigBridge\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Swiftly\\TwigBridge\\Tests\\": "tests/"
         }
     }
 }
